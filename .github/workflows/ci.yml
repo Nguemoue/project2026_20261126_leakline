@@ -1,0 +1,20 @@
+name: self-test
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          coverage: none
+      - name: Syntax and self-test
+        run: |
+          php -l leakline.php
+          php -l tests/selftest.php
+          php tests/selftest.php

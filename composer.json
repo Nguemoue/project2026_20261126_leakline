@@ -1,0 +1,10 @@
+{
+    "name": "nguemoue/leakline",
+    "description": "Single-file PHP secret scanner. Flags API keys, tokens, private keys and real .env files before they reach git.",
+    "type": "project",
+    "license": "MIT",
+    "bin": ["leakline.php"],
+    "require": {
+        "php": ">=8.1"
+    }
+}
